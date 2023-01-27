@@ -1,10 +1,6 @@
 import { DataSource } from 'typeorm';
-import {
-  ProductEntity,
-  
-} from '@ventas/entities';
-
 import { DataSourceEnum, RepositoryEnum } from '@shared/enums';
+import { ProductEntity } from '../models/product.entity';
 
 export const ventasProviders = [
   {
