@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Column, 
     CreateDateColumn, 
     DeleteDateColumn, 
@@ -5,6 +6,7 @@ import { Column,
     OneToMany, 
     PrimaryGeneratedColumn, 
     UpdateDateColumn } from "typeorm";
+import { ProductEntity } from "./product.entity";
 
 @Entity('category', {schema:'ventas'} )
 export class CategoryEntity{
@@ -48,4 +50,5 @@ deletedAt: Date;
     comment:'Descripción del producto',
   })
   description: string;
+  products: any;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { BeforeInsert, 
          BeforeUpdate, 
          Column, 
@@ -7,6 +8,7 @@ import { BeforeInsert,
          ManyToOne, 
          PrimaryGeneratedColumn, 
          UpdateDateColumn } from "typeorm";
+import { CategoryEntity } from "./category.entity";
 
 @Entity('products', {schema:'ventas'} )
 export class ProductEntity{

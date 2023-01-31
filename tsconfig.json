@@ -21,9 +21,12 @@
   "@ventas/models":[
     "./src/modules/ventas/models"
   ],
+  "@shared/enums":[
+    "./src/shared/enums/index.ts"
+  ],
   "@ventas/controllers":[
     "./src/modules/ventas/controllers"
-  ],
+  ],  
   "@ventas/provaiders":[
     "./src/modules/ventas/providers"
   ],
@@ -32,5 +35,8 @@
   ],
   "@ventas/dto":[
     "./src/modules/ventas/dto"
-  ]
+  ],
+  "@ventas/entities": [
+    "./src/modules/ventas/entities"
+  ],
 }
