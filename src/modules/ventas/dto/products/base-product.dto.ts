@@ -1,29 +1,28 @@
 /* eslint-disable prettier/prettier */
 import { IsNotEmpty } from "class-validator";
 import { ArrayNotEmpty, IsArray, IsInt, IsNumber, IsPositive, IsString } from "class-validator/types/decorator/decorators";
-import { ArrayNotEmptyValidationOptions,IsArrayValidationoptions,IsIntValidationoptions,IsPositiveValidationOption,IsNumberValidationoptions,IsNotEmptyValidationOptions,IsStringValidationoptions } from '../../../../shared/validations'
+import { arrayNotEmptyValidationOptions,isIntValidationOptions,isArrayValidationOptions,isPositiveValidationOptions,isNumberValidationOptions,isNotEmptyValidationOptions,isStringValidationOptions } from '../../../../shared/validations/index'
 import { CategoryEntity } from "../../models";
-/* eslint-disable prettier/prettier */
 export class BaseProductDto {
-     @IsNotEmpty(IsNotEmptyValidationOptions())
-     @IsString(IsStringValidationoptions())
+     @IsNotEmpty(isNotEmptyValidationOptions())
+     @IsString(isStringValidationOptions())
      readonly title: string;
 
-     @IsNotEmpty(IsNotEmptyValidationOptions())
-     @IsNumber(IsNumberValidationoptions())
-     @IsPositive(IsPositiveValidationOption())
-     readonly price: number;
+     @IsNotEmpty(isNotEmptyValidationOptions())
+     //@IsNumber(isNumberValidationOptions())
+     @IsPositive(isPositiveValidationOptions())
+     readonly price: number;  
 
-     @IsNotEmpty(IsNotEmptyValidationOptions())
-     @IsString(IsStringValidationoptions())
+     @IsNotEmpty(isNotEmptyValidationOptions())
+     @IsString(isStringValidationOptions())
      readonly description: string;
 
-     @IsNotEmpty(IsNotEmptyValidationOptions())
-     @IsInt(IsIntValidationoptions())
-     @IsPositive(IsPositiveValidationOption())
+     @IsNotEmpty(isNotEmptyValidationOptions())
+     @IsInt(isIntValidationOptions())
+     @IsPositive(isPositiveValidationOptions())
      readonly categoryId: CategoryEntity;
 
-     @ArrayNotEmpty(ArrayNotEmptyValidationOptions())
-     @IsArray(IsArrayValidationoptions())
+     @ArrayNotEmpty(arrayNotEmptyValidationOptions())
+     @IsArray(isArrayValidationOptions())
      readonly images: string[];
 }
