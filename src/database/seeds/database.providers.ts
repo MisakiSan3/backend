@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { DataSource } from 'typeorm';
-import { ConfigType } from '@nestjs/config';
-import { DataSourceEnum } from '@shared/enums';
-import { config } from '@config';
+import { ConfigType } from '../../../node_modules/@nestjs/common/index';
+import { DataSourceEnum } from '../../shared/enums/index';
+import { config } from '../../../node_modules/@tsconfig';
 
 export const databaseProviders = [
   {
