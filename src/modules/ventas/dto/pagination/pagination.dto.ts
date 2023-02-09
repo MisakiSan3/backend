@@ -1,18 +1,20 @@
-export class PaginationDto{
-    @IsOptional()
-    @IsPositive()
-    limit:number;
+/* eslint-disable prettier/prettier */
+import { IsOptional, IsPositive, IsString, Min } from "class-validator";
 
-    @IsOptional()
-    @Min(0)
-    page:number;
+export class PaginationDto {
+  @IsOptional()
+  @IsPositive()
+  limit: number;
 
-    @IsOptional()
-    @IsString()
-    search:string;
+  @IsOptional()
+  @Min(0)
+  page: number;
 
-    static gettOffset(limit:number, page:number):number{
-        return page * limit;
-    }
+  @IsOptional()
+  @IsString()
+  search: string;
 
+  static gettOffset(limit: number, page: number): number {
+    return page * limit;
+  }
 }

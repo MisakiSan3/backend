@@ -39,4 +39,7 @@
   "@ventas/entities": [
     "./src/modules/ventas/entities"
   ],
+  "@config": [
+    "./src/node_modules/@nestjs/config"
+  ]
 }

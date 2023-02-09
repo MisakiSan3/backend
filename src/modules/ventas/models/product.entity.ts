@@ -12,7 +12,7 @@ import { CategoryEntity } from "./category.entity";
 
 @Entity('products', {schema:'ventas'} )
 export class ProductEntity{
-    @PrimaryGeneratedColumn('sv')
+    @PrimaryGeneratedColumn('increment')
     id:string;
     //Crear
     @CreateDateColumn({
